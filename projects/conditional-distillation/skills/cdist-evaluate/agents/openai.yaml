@@ -1,0 +1,4 @@
+interface:
+  display_name: "评价与统计"
+  short_description: "Evaluate CDist outputs with paired statistics"
+  default_prompt: "使用 $cdist-evaluate 完成当前研究项目中对应的已授权任务，先读取实际项目状态。"

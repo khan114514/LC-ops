@@ -1,0 +1,4 @@
+interface:
+  display_name: "阶段训练"
+  short_description: "Run fair staged CDist training experiments"
+  default_prompt: "使用 $cdist-train 完成当前研究项目中对应的已授权任务，先读取实际项目状态。"

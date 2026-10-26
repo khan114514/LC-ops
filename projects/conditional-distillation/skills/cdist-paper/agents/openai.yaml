@@ -1,0 +1,4 @@
+interface:
+  display_name: "ICML论文初稿"
+  short_description: "Draft an evidence-grounded CDist ICML paper"
+  default_prompt: "使用 $cdist-paper 完成当前研究项目中对应的已授权任务，先读取实际项目状态。"

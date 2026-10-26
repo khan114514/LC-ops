@@ -1,0 +1,29 @@
+{
+  "snapshot_date": "2026-10-26",
+  "skills": [
+    {
+      "name": "ml-paper-writing",
+      "kind": "optional_upstream_snapshot",
+      "source": "user-provided installed skill ml-paper-writing",
+      "sha256_skill": "96733e6d758642d792ed15b7c08eb90548d4775099368cd72a8312127f2fe911",
+      "license_file": "vendor/skills/ml-paper-writing/UPSTREAM-LICENSE",
+      "mandatory": false
+    },
+    {
+      "name": "brainstorming-research-ideas",
+      "kind": "optional_upstream_snapshot",
+      "source": "user-provided installed skill brainstorming-research-ideas",
+      "sha256_skill": "8422a1a6dc0a88d05f02b9fbe0f8c2ae06a77024856d18125efa13d19d855d46",
+      "license_file": "vendor/skills/brainstorming-research-ideas/UPSTREAM-LICENSE",
+      "mandatory": false
+    },
+    {
+      "name": "creative-thinking-for-research",
+      "kind": "optional_upstream_snapshot",
+      "source": "user-provided installed skill creative-thinking-for-research",
+      "sha256_skill": "ec111f9236d7f9d72c895cebbf0f534ac93f4249172607559ad4bf92aefc5310",
+      "license_file": "vendor/skills/creative-thinking-for-research/UPSTREAM-LICENSE",
+      "mandatory": false
+    }
+  ]
+}

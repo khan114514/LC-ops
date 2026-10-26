@@ -1,0 +1,94 @@
+# 这是起始计划，不是执行记录。接收者运行启动 prompt 后填入本地信息。
+project_name: conditional-distillation-study
+working_name: CDist
+objective: three-task conditional distillation research and an evidence-grounded ICML draft
+bundle_date: '2026-10-26'
+target_venue: ICML
+target_year: null
+execution_status: not_started
+project_root: null
+code_root: null
+resources:
+  host: null
+  gpu_devices: []
+  scheduler: null
+  concurrent_gpu_jobs: 1
+  max_gpu_hours: null
+  max_wall_hours: null
+  storage_limit_gb: null
+  paid_spend_limit: null
+models:
+  teacher_candidate: Wan2.1-T2V-1.3B
+  student_candidate: Concat-ID-Wan-AdaLN
+  second_platform_candidate: CogVideoX-5B_and_ConsisID
+  task2_candidate: SD1.5_and_control_v11p_sd15_canny
+  task3_candidate: SD1.5_and_control_v11p_sd15_openpose
+  exact_revisions: {}
+plan:
+  synthetic_training_sizes: [128, 2048, 8192]
+  nested_efficiency_subsets: [512, 2048, 8192]
+  formal_train_seeds: [11, 22, 33]
+  toy_train_seeds: [11, 22, 33, 44, 55]
+  inference_seeds: [101, 202]
+  formal_identity_domains: 2
+  identities_per_domain: 100
+  prompts_per_identity: 4
+  trained_methods: [P, H0, H1, H2, O0, O1, C-H, C-O]
+  inference_only_methods: [S0]
+  checkpoint_policy: development_set_only
+  local_rollout_k: 1
+  final_query_time_matched: true
+  starting_lora_rank: 16
+  starting_lora_alpha: 32
+  starting_learning_rate: 0.00001
+  values_are_provisional: true
+authorization:
+  research_execution: not_yet_requested_in_this_bundle
+  create_project_chats: only_after_receiver_sends_start_prompt
+  recurring_automation: false
+  external_publication: false
+  credentials_in_bundle: false
+
+# Three required research tasks. Existing plan values above describe T1 video unless shared explicitly.
+tasks:
+  T1:
+    name: identity_video
+    required_in_research_scope: true
+    status: NOT_STARTED
+    additional_condition: identity_reference_image
+    external_conditions: 200
+    prompts_per_condition: 4
+    inference_seeds_per_condition: 2
+    formal_outputs_per_checkpoint: 1600
+    formal_main_outputs_suggested: 40000
+    output_kind: video
+  T2:
+    name: canny_image
+    required_in_research_scope: true
+    status: NOT_STARTED
+    additional_condition: canny_edge_map
+    teacher_base_candidate: SD1.5_exact_revision_to_verify
+    student_control_candidate: lllyasviel/control_v11p_sd15_canny
+    training_sizes_suggested: [128, 2048, 8192]
+    development_images_suggested: 512
+    external_conditions: 500
+    prompts_per_condition: 2
+    inference_seeds_per_condition: 2
+    formal_outputs_per_checkpoint: 2000
+    formal_main_outputs_suggested: 50000
+    output_kind: image
+  T3:
+    name: human_pose_image
+    required_in_research_scope: true
+    status: NOT_STARTED
+    additional_condition: openpose_body_skeleton
+    teacher_base_candidate: same_SD1.5_revision_as_T2
+    student_control_candidate: lllyasviel/control_v11p_sd15_openpose
+    training_sizes_suggested: [128, 2048, 8192]
+    development_images_suggested: 512
+    external_conditions: 500
+    prompts_per_condition: 2
+    inference_seeds_per_condition: 2
+    formal_outputs_per_checkpoint: 2000
+    formal_main_outputs_suggested: 50000
+    output_kind: image

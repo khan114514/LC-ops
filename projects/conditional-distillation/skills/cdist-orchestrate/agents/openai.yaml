@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究总控"
+  short_description: "Manage CDist evidence and experiment queues"
+  default_prompt: "使用 $cdist-orchestrate 完成当前研究项目中对应的已授权任务，先读取实际项目状态。"

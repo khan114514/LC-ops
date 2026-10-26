@@ -1,0 +1,4 @@
+interface:
+  display_name: "机制诊断"
+  short_description: "Test CDist mechanisms with matched states"
+  default_prompt: "使用 $cdist-mechanism 完成当前研究项目中对应的已授权任务，先读取实际项目状态。"

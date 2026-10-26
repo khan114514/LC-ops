@@ -1,0 +1,4 @@
+interface:
+  display_name: "模型兼容工程"
+  short_description: "Validate CDist model and gradient adapters"
+  default_prompt: "使用 $cdist-engineer 完成当前研究项目中对应的已授权任务，先读取实际项目状态。"

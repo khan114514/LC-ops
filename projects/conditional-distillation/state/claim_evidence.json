@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "claims": [
+    {
+      "claim_id": "A",
+      "status": "UNTESTED",
+      "supporting_runs": [],
+      "counterevidence_runs": [],
+      "figure_ids": [],
+      "paper_locations": [],
+      "per_task_status": {
+        "T1": "UNTESTED",
+        "T2": "UNTESTED",
+        "T3": "UNTESTED"
+      }
+    },
+    {
+      "claim_id": "B",
+      "status": "UNTESTED",
+      "supporting_runs": [],
+      "counterevidence_runs": [],
+      "figure_ids": [],
+      "paper_locations": [],
+      "per_task_status": {
+        "T1": "UNTESTED",
+        "T2": "UNTESTED",
+        "T3": "UNTESTED"
+      }
+    },
+    {
+      "claim_id": "C",
+      "status": "UNTESTED",
+      "supporting_runs": [],
+      "counterevidence_runs": [],
+      "figure_ids": [],
+      "paper_locations": [],
+      "per_task_status": {
+        "T1": "UNTESTED",
+        "T2": "UNTESTED",
+        "T3": "UNTESTED"
+      }
+    }
+  ]
+}

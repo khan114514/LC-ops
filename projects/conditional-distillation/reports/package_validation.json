@@ -1,0 +1,39 @@
+{
+  "kind": "HANDOFF_PACKAGE_CHECK_NOT_RESEARCH_RESULT",
+  "date": "2026-10-26",
+  "custom_skills_validated": [
+    "cdist-data",
+    "cdist-engineer",
+    "cdist-evaluate",
+    "cdist-figures",
+    "cdist-generalize",
+    "cdist-literature",
+    "cdist-mechanism",
+    "cdist-method",
+    "cdist-orchestrate",
+    "cdist-paper",
+    "cdist-review",
+    "cdist-train"
+  ],
+  "skill_count": 12,
+  "prompt_count": 18,
+  "optional_vendor_skills": 3,
+  "source_ledger_rows": 28,
+  "script_validation": "PASS: isolated skill install; three-task workload arithmetic and separate measured costs; nested table conversion regression; AST validation",
+  "citation_validation": "PASS: 12 complete fetched entries and 12 matching manuscript cite keys",
+  "source_material": "byte-identical pasted text; DOCX not provided",
+  "independent_forward_test": "reports/independent_forward_test.md",
+  "training": "NOT_RUN",
+  "video_generation": "NOT_RUN",
+  "empirical_claims": "UNTESTED",
+  "paper_status": "PRE_EXPERIMENT_DRAFT_V0",
+  "latex_compile_status": "SUCCESS; revised main.tex SHA256 194603635380af2ed33ff26ba167c1dedbe19179fd00828ef63718e8a7c13f9c",
+  "revision": "three_tasks_v2",
+  "research_scope": [
+    "T1_identity_video",
+    "T2_canny_image",
+    "T3_human_pose_image"
+  ],
+  "task_scoped_matrix_rows": 76,
+  "independent_three_task_review": "reports/three_task_consistency.md"
+}

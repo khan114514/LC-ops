@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "project": "conditional-distillation-study",
+  "phase": "PREPARED",
+  "execution_status": "NOT_STARTED",
+  "last_update": "2026-10-26",
+  "owner": null,
+  "active_protocol_sha": null,
+  "paused": null,
+  "pause_note": "No pre-existing research run was inspected or resumed by packaging. On resume preserve actual user state.",
+  "gates": {},
+  "claims": {
+    "A_conflict_exists": "UNTESTED",
+    "B_correction_has_independent_value": "UNTESTED",
+    "C_hybrid_trajectory_has_independent_value": "UNTESTED"
+  },
+  "runs": [],
+  "next_actions": [
+    "read specs/three_task_protocol.md and dispatch three task tracks",
+    "receiver sends prompts/00_START_HERE_CN.md",
+    "inspect local resources and exact model compatibility",
+    "freeze first protocol and execute within authorized budget"
+  ],
+  "paper_status": "PRE_EXPERIMENT_DRAFT_V0",
+  "research_scope": [
+    "T1_identity_video",
+    "T2_canny_image",
+    "T3_human_pose_image"
+  ],
+  "task_status": {
+    "T1": {
+      "status": "NOT_STARTED",
+      "gates": {},
+      "claims": {
+        "A": "UNTESTED",
+        "B": "UNTESTED",
+        "C": "UNTESTED"
+      }
+    },
+    "T2": {
+      "status": "NOT_STARTED",
+      "gates": {},
+      "claims": {
+        "A": "UNTESTED",
+        "B": "UNTESTED",
+        "C": "UNTESTED"
+      }
+    },
+    "T3": {
+      "status": "NOT_STARTED",
+      "gates": {},
+      "claims": {
+        "A": "UNTESTED",
+        "B": "UNTESTED",
+        "C": "UNTESTED"
+      }
+    }
+  }
+}
