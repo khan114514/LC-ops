@@ -5,6 +5,8 @@ description: 为条件扩散蒸馏实现并验证同状态预测、参数化转�
 
 # CDist 兼容与目标工程
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 先定位活跃项目，读 [共享契约](../../prompts/01_SHARED_WORKER_CONTRACT.md)、[预测与目标契约](../../specs/prediction_and_target_contract.md)、assignment与当前状态。只写分配目录；总控单写state，GPU先取租约。技能安装快照不能覆盖活跃项目协议。
 
 ## 先确定数学与上游约定
@@ -33,3 +35,5 @@ done：对齐/转换/梯度/独立推理/成本有真实证据；有任一关键
 
 
 三任务范围：读取 [任务契约](../../specs/three_task_protocol.md)，按assignment.task_id选择T1身份视频、T2 Canny图像、T3人体姿态图像的独立数据、代理、指标、gate与预算；新run使用runs/<task_id>/<run_id>/。本技能原有视频/身份细节仅用于T1，不能强加给T2/T3。三者都是正式研究范围；负结果需保留，未执行不能声称三任务实验完成，可选第二视频架构不是第4个主任务。
+
+成本按 [执行契约](../../specs/execution_contract.md) 分task/method/config测量并回交，不能把H2更新耗时代替P/H/O/C全矩阵。缺训练入口时实际实现，真实模型最小更新/重载/独立生成链路未过则不宣告运行就绪。

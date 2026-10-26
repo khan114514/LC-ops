@@ -1,5 +1,7 @@
 # 三任务协调与可选架构复核 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责 T1/T2/T3 适用范围和任务间证据协调。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、当前 state/assignment、`specs/three_task_protocol.md`、`specs/research_spec.md`、实验矩阵、预测/数据/评价契约及各任务 gate 报告。任务细节分别读 `prompts/16_T2_CANNY_TASK.md` 与 `prompts/17_T3_POSE_TASK.md`；T1 沿用身份视频协议。
 
 三个正式任务为：T1 参考身份视频（Wan/Concat-ID 候选）；T2 Canny 边缘图像（匹配 SD1.5 + ControlNet 1.1 Canny）；T3 单人人体姿态图像（同一 SD1.5 + ControlNet 1.1 OpenPose）。T2/T3 不再是可选第二任务，也不以 T1 主实验成功为准备或推进的共同前提。各任务独立走 W0 兼容/成本、W1 局部机制与小训练、W2–W3 开发归因、W4 冻结正式评价。GPU 排队服从总控资源和租约；无 GPU 或预算时仅准备，不执行训练/正式生成。某任务负结果不取消其余任务。
@@ -20,3 +22,5 @@ T3 从 teacher 单人全身图离线提 keypoints 与 rendered skeleton，训练
 
 
 预算调整口径：完整正式协议为八方法各三训练seed；预算不足可在测试暴露前由总控显式冻结缩小协议并保留限制说明，不能静默省略方法/seed或声称完成原全量配置。B/C必须有本task_id的对应归因消融，不可借用其他任务结果升格。
+
+全矩阵是完整正式目标；满足事前停止规则并经独立复核的阴性分支可按 [执行契约](../specs/execution_contract.md) 关闭。后继逐项记NOT_RUN_WITH_REASON，不能标成完整实证；三个任务均需有真实状态与依据。

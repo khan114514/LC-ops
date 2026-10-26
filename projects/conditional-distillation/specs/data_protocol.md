@@ -1,5 +1,7 @@
 # 数据、划分与参考条件协议
 
+当前方法范围以 [方法搜索与选择](method_search_and_selection.md) 为准：问题固定，算法开放。本文OPD、H/O/C、投影和局部轨迹描述初始候选家族；原experiment_matrix.csv是该家族模板。其它候选的专用步骤/机制门/控制由selected_method和active_experiment_matrix定义，数据隔离、公平预算、独立部署及证据真实性等共同要求保留。
+
 三任务范围修订：正式任务为T1身份视频、T2 Canny图像、T3人体姿态图像，见 [three_task_protocol.md](three_task_protocol.md)。本文件原有视频/身份/帧数和40,000视频细节描述T1；图像任务按三任务契约执行，不能套用人脸检测或按视频身份分组来评图像边缘/姿态。
 
 状态：待执行；下列规模为过滤后的有效量建议。数据版本冻结后生成不可变 manifest 与 SHA，不以目录文件数代替样本、身份或视频数。

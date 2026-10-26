@@ -1,27 +1,31 @@
 # 阶段门槛、证据与结果契约
 
-本文件规定证据怎样使工作可复算。当前状态为 PREPARED / NOT_STARTED，所有主张 UNTESTED。门槛不是“必须取得正结果”；负结果、停止扩展及收缩论文范围也是有效研究产出。没有预注册数值时先在开发集定值，不能在测试后补写门槛。
+当前方法范围以 [方法搜索与选择](method_search_and_selection.md) 为准：问题固定，算法开放。本文OPD、H/O/C、投影和局部轨迹描述初始候选家族；原experiment_matrix.csv是该家族模板。其它候选的专用步骤/机制门/控制由selected_method和active_experiment_matrix定义，数据隔离、公平预算、独立部署及证据真实性等共同要求保留。
+
+本文件规定证据怎样使工作可复算。当前状态为 PREPARED / NOT_STARTED，所有主张 UNTESTED。门槛不是“必须取得正结果”；负结果、停止扩展及收缩论文范围也是有效研究产出。没有预注册数值时先在开发集定值，不能在测试后补写门槛。整体终态、阴性关闭与预算边界以 [执行契约](execution_contract.md) 为准；草稿完成不结束仍有可执行工作的研究。
 
 ## 阶段门槛
 
 | Gate | 需审查的可观测证据 | 通过后可做 | 未通过时 |
 |---|---|---|---|
-| G0 适配和成本 | 确切 checkpoint/许可/代码版本；状态与参数化 roundtrip；mask；可微身份梯度；一次真实完整更新与独立生成；5预热+20完整更新建议计时 | 申请/使用已授权的下一阶段预算 | 修适配或换经授权平台；不虚报单DiT耗时为全研究成本 |
-| G1 冲突与老师价值 | 二维解析复核；冻结视频局部干预；共享续采；身份/质量/动作联合曲线、失败和CI | 128条试训 | 老师无局部收益则检查平台/时间段或收缩问题 |
-| G2 试训闭环 | 约200更新；KD接受/拒绝；学生纯噪声完整推理；条件替换响应；静止/复制/失效审查 | 2,048条有限筛选 | 修目标/代理/数据，不能用老师前缀结果替代 |
-| G3 归因与预注册 | P/H0/H1/H2/O0/O1/C-H/C-O 开发比较；公平配置；弱KD/随机门控/仅条件必要诊断；冻结正式协议、test case、阈值及资源预算 | 8,192条正式三seed | 缩小主张或先补关键对照；不无限跑网格 |
-| G4 主实验 | 八方法三seed与S0；相同更新和相同compute分开报告；独立外测；训练seed与identity CI分开；全部失败入分母 | 确认主张与人评 | 公开缺失，区分确认/探索，不能填补造数 |
+| G0 适配和成本 | 确切checkpoint/许可/代码版本；候选实际使用的状态/参数化/mask/梯度检查，不适用项有N/A理由；真实完整更新、重载、独立生成/评价与完整成本 | 申请/使用已授权的下一阶段预算 | 修适配或换经授权平台；不虚报单DiT耗时为全研究成本 |
+| G1 候选机制与可行性 | 初始家族用局部老师干预/共享续采；其它候选用自己的冻结区分实验；均查真实质量/条件/失败和不确定性 | 候选协议规定的真实最小试训（初始家族建议128条） | 候选机制无收益先排除工程问题；按事前规则独立复核后可关闭该candidate×task分支，未测替代候选不受牵连，后继保持NOT_RUN |
+| G2 试训闭环 | 真实更新、学生纯噪声完整推理、条件替换响应及失效审查；初始家族建议约200更新并查KD接受/拒绝，其它候选按自身机制 | 候选协议规定的有限筛选（初始家族建议2,048条） | 修目标/代理/数据，不能用老师前缀结果替代 |
+| G3 归因与预注册 | 候选公平开发比较、新颖性主源与实用性证据；冻结选择、selected_method/active_matrix、必要控制、test case、阈值及资源预算 | 冻结规模的正式三seed（初始家族建议8,192条） | 缩小主张或先补关键对照；不无限跑网格 |
+| G4 主实验 | 选定矩阵的主方法/合理强对照、通常三seed与S0；相同更新和相同compute分开报告；独立外测；训练seed与identity CI分开；全部失败入分母 | 确认主张与人评 | 公开缺失，区分确认/探索，不能填补造数 |
 | G5 泛化与论文 | 必需关键消融、第二平台/任务或明确限定；图表脚本；claim→evidence；许可/复现材料；当前投稿要求 | 更新实证论文草稿与投稿材料 | 保留预实验草稿或有证据的窄结论，不把待验证写成完成 |
 
-G1/G2 的目标是尽早判断研究可行性，不要求老师在所有时间段获益。若只某区间有效，预注册该范围并在论文写清。执行中保留用户暂停状态；阶段失败与用户暂停分开，不能自动恢复被暂停训练。费用、外部发信、公开上传、投稿依实际授权，不因本包文档而扩张。
+G1/G2 的目标是尽早判断研究可行性，不要求老师在所有时间段获益。若候选只在某区间或适用范围有效，预注册该范围并在论文写清。执行中保留用户暂停状态；阶段失败与用户暂停分开，不能自动恢复被暂停训练。费用、外部发信、公开上传、投稿依实际授权，不因本包文档而扩张。
 
 ## Run 最小字段
 
 同一结果以不可复用的 `run_id` 追踪，字段与 `templates/run_manifest.example.json` 对齐：
 
-`task_id,run_id,status,protocol_sha,code_sha,config_sha,data_version,split,method,train_seed,inference_seed,artifact_paths`。
+`candidate_id,task_id,run_id,status,protocol_sha,code_sha,config_sha,data_version,split,method,train_seed,inference_seed,artifact_paths`。
 
 实际 run 另记 `execution_kind,code_dirty,evaluation_version,checkpoint_sha,host,gpu_model,scheduler_job_id,started_at,finished_at,actual_gpu_hours,failure_reason,is_confirmatory`。时间带时区或 UTC，所有路径相对项目根或为有权限的 artifact URI；不放绝对私人路径、token 或凭据。run_id 建议包含任务/方法/seed/短SHA/attempt，不把“best”当唯一标识。
+
+辅助TOY采用task_id=TOY、execution_kind=toy、runs/TOY/<run_id>/，只记simulated证据，不替代正式任务。
 
 建议实际状态枚举 `PLANNED,RUNNING,COMPLETED,FAILED,BLOCKED,CANCELLED,MISSING`；模板用 `TEMPLATE_NOT_A_RUN`，矩阵用 `PLANNED_NOT_EXECUTED`，均不能当已执行记录。S0 `train_seed=null`；推理 seed 不适用时也为 null。`status=COMPLETED` 只表示这个 run 按协议执行完成，不意味着论文主张成立。
 
@@ -39,9 +43,9 @@ G1/G2 的目标是尽早判断研究可行性，不要求老师在所有时间�
 
 ## 必需 artifact
 
-每次训练：manifest、resolved config、日志、loss/接受率/梯度与拒绝原因、完整成本、checkpoint SHA、checkpoint选择记录、异常/重试日志。每次推理：预定 case manifest、视频/图像 hash、实际 seed/config、逐case状态。每次评价：逐视频/帧原始数值、评价器与预处理版本、缺失与失败、聚类ID、汇总与bootstrap脚本、bootstrap seed和统计配置。
+每次训练：manifest、resolved config、日志、loss/梯度与候选适用的接受率或拒绝原因、完整成本、checkpoint SHA、checkpoint选择记录、异常/重试日志。每次推理：预定 case manifest、视频/图像 hash、实际 seed/config、逐case状态。每次评价：逐视频/帧原始数值、评价器与预处理版本、缺失与失败、聚类ID、汇总与bootstrap脚本、bootstrap seed和统计配置。
 
-主张表每行 `claim_id,claim_text,status,scope,evidence_run_ids,figure_table_ids,limitations,decision_date`。A/B/C 状态从 UNTESTED 变成 SUPPORTED/PARTIALLY_SUPPORTED/NOT_SUPPORTED 时必须附对应对照与不确定性，不能凭作者判断空更新。
+主张表每行 `claim_id,claim_text,status,scope,evidence_run_ids,figure_table_ids,limitations,decision_date`。所选候选主张（初始家族为A/B/C）状态从 UNTESTED 变成 SUPPORTED/PARTIALLY_SUPPORTED/NOT_SUPPORTED 时必须附对应对照与不确定性，不能凭作者判断空更新。
 
 ## 公平预算与恢复
 
@@ -56,4 +60,6 @@ G1/G2 的目标是尽早判断研究可行性，不要求老师在所有时间�
 预算口径补充：40,000 仅覆盖每个方法/训练seed的一个开发集选定 checkpoint、一个冻结推理操作点及 S0 的一套评测。如果 update-matched 与 compute-matched 对应不同 checkpoint，并都进行全量外测，应分别增加生成与评价预算；额外操作点、性能曲线、消融和重试也不在这 40,000 内。不能同时宣称 40,000 已覆盖两套全量对照。
 
 
-三任务完成门：每个T1/T2/T3独立记录G0–G4和A/B/C结论、数据/代理/独立评价/预算。三个任务均列入正式研究范围；某项未执行不得宣称三任务实验完成。任务内负结果允许，不能删任务。可选第二视频架构不计为额外主任务。跨任务规则与图像数量见 [three_task_protocol.md](three_task_protocol.md)。
+三任务完成门：每个T1/T2/T3独立记录G0–G4和所选候选主张结论（初始家族为A/B/C）、数据/代理/独立评价/预算。三个任务均列入正式研究范围；某项未执行不得宣称三任务实验完成。任务内负结果允许，不能删任务。可选第二视频架构不计为额外主任务。跨任务规则与图像数量见 [three_task_protocol.md](three_task_protocol.md)。
+
+阴性提前关闭及缩小协议完成必须按 [执行契约](execution_contract.md) 分别报告，不能满足FULL_PROTOCOL_COMPLETED。诚实草稿通过只证明写作没有越过证据，不证明实际实验或项目整体完成。

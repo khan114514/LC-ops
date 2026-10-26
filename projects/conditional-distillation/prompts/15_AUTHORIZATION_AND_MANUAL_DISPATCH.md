@@ -13,7 +13,8 @@
 ```yaml
 project_root: <当前机器真实绝对路径>
 assignment_id: <总控唯一分配>
-task_id: <T1身份视频或T2 Canny图像或T3人体姿态图像>
+task_id: <T1或T2或T3；二维机制用TOY；非实验工作为null>
+task_ids: [<非实验工作涉及的正式任务；实验工作填唯一task_id>]
 role_prompt: prompts/<对应文件>.md
 owner: <真实聊天/worker标识>
 inputs: [<实际存在的输入相对路径>]
@@ -26,6 +27,6 @@ report_path: reports/<assignment_id>/report.md
 reply_to: <已获授权的总控聊天标识或手工回交>
 ```
 
-启动独立角色：先粘贴派工卡，再粘贴 `02`–`14` 对应角色 prompt；共享目录必须真实可访问。涉及不同机器时由总控安排显式同步清单与 checksum，不假设路径自动共享。回交将 `report.md`、`status.json` 和工件清单给总控；不要在每个聊天里重启整套主流程。
+启动独立角色：先粘贴派工卡，再粘贴 `02`–`14` 或 `16`/`17`/`18` 对应角色 prompt；共享目录必须真实可访问。涉及不同机器时由总控安排显式同步清单与 checksum，不假设路径自动共享。回交将 `report.md`、`status.json` 和工件清单给总控；不要在每个聊天里重启整套主流程。
 
 建议先并行文献核验、静态兼容工程、CPU toy；数据生成、视频局部干预、训练、外部生成等依照 gate 和 GPU 租约排队。paper/图表在早期完成结构与方法示意，真实结果晚些填入；QA 用只读独立角色复核同一版本。

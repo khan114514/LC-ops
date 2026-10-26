@@ -16,10 +16,10 @@
   },
   "runs": [],
   "next_actions": [
-    "read specs/three_task_protocol.md and dispatch three task tracks",
-    "receiver sends prompts/00_START_HERE_CN.md",
-    "inspect local resources and exact model compatibility",
-    "freeze first protocol and execute within authorized budget"
+    "read execution_contract and method_search_and_selection",
+    "inspect authorized resources and exact model compatibility",
+    "verify nearest work, propose distinct candidates and freeze fair development pilots",
+    "select by novelty evidence and measured practicality before formal tests"
   ],
   "paper_status": "PRE_EXPERIMENT_DRAFT_V0",
   "research_scope": [
@@ -55,5 +55,7 @@
         "C": "UNTESTED"
       }
     }
-  }
+  },
+  "method_search_state": "state/method_search.json",
+  "claims_scope": "CDIST_INITIAL_ONLY"
 }

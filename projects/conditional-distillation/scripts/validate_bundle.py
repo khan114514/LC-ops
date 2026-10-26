@@ -13,7 +13,11 @@ def validate(root):
     required = ['README_先读这里.md', 'AGENTS.md', 'project.yaml', 'source/original_research_plan_zh.txt',
                 'state/research-state.json', 'prompts/00_START_HERE_CN.md', 'specs/research_spec.md',
                 'specs/experiment_matrix.csv', 'specs/three_task_protocol.md',
-                'prompts/16_T2_CANNY_TASK.md', 'prompts/17_T3_POSE_TASK.md', 'paper/main.tex']
+                'prompts/16_T2_CANNY_TASK.md', 'prompts/17_T3_POSE_TASK.md',
+                'prompts/18_METHOD_SEARCH_AND_SELECTION.md', 'specs/execution_contract.md',
+                'specs/method_search_and_selection.md', 'state/method_search.json',
+                'templates/assignment.example.json', 'templates/completion_report.example.json',
+                'templates/method_candidate.example.json', 'templates/method_costs.example.json', 'paper/main.tex']
     for name in required:
         if not (root / name).is_file():
             errors.append('Missing ' + name)

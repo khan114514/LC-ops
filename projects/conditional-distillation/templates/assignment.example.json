@@ -1,0 +1,19 @@
+{
+  "template_only": true,
+  "contract_version": "autoresearch-execution-v1",
+  "assignment_id": null,
+  "owner": null,
+  "role": null,
+  "task_id": null,
+  "task_ids": [],
+  "status": "queued",
+  "inputs": [],
+  "allowed_write_paths": [],
+  "protocol_sha": null,
+  "run_ids": [],
+  "resource_request": null,
+  "done_gate": null,
+  "report_path": null,
+  "dependencies": [],
+  "candidate_id": null
+}

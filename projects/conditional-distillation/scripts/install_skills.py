@@ -19,7 +19,7 @@ def install(bundle, destination):
         raise ValueError('Destination cannot be inside a source skill')
     # Copy shared project resources into each installed skill, then rebase only actual
     # Markdown links. Runtime research paths still resolve against the active project.
-    roots = ['specs', 'prompts', 'templates', 'literature']
+    roots = ['specs', 'prompts', 'templates', 'literature', 'scripts']
     for src in sources:
         target = destination / src.name
         target.mkdir(parents=True)
@@ -28,7 +28,8 @@ def install(bundle, destination):
             for name in roots:
                 origin = bundle / name
                 if origin.is_dir():
-                    shutil.copytree(origin, target / 'references' / name, dirs_exist_ok=True)
+                    shutil.copytree(origin, target / 'references' / name, dirs_exist_ok=True,
+                                    ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
             text = (target / 'SKILL.md').read_text(encoding='utf-8')
             text = re.sub(r'\]\(\.\./\.\./(specs|prompts|templates|literature)/', r'](references/\1/', text)
             text += '\n\n安装说明：本技能的 references 是安装时的交接快照。执行时先定位实际研究根目录，优先读取当前项目的同名规范、状态与分配；不要把快照当成最新实验结果。\n'

@@ -5,6 +5,8 @@ description: Draft and revise an ICML-oriented paper from audited conditional di
 
 # Evidence-grounded ICML drafting
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 Use for the manuscript, figure narrative, results integration, appendix or submission readiness. Resolve `PROJECT_ROOT` from the supplied bundle path or an ancestor with `paper/README.md`; do not assume an installed skill resides in the project. Read `paper/README.md`, the research specification, literature audit and evidence manifest.
 
 If available, read the bundled `vendor/skills/ml-paper-writing/SKILL.md`. This project authorizes drafting a concrete reviewable manuscript without a separate pre-draft permission round. Draft now with explicit framing assumptions; ask only for a necessary unresolved scientific decision after making independent progress.

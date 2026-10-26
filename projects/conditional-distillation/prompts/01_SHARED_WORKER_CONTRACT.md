@@ -4,15 +4,15 @@
 
 ## 启动与状态
 
-每轮开始读：`project.yaml`、`state/research-state.json`、`state/assignments.json`、本契约、`specs/three_task_protocol.md`、角色 prompt、与角色相关的 `specs/`。身份不明、assignment 不存在、协议 hash 不匹配或全局 paused 时先停止依赖这些条件的执行，报告总控并做与暂停意图相容的只读整理。不要静默创建第二个总控。缺输入写明缺项；不能把计划里的路径当作实际存在的证据。
+每轮开始读：`project.yaml`、`state/research-state.json`、`state/assignments.json`、本契约、`specs/three_task_protocol.md`、角色 prompt、`specs/execution_contract.md`、`specs/method_search_and_selection.md`、`state/method_search.json`、与角色相关的 `specs/`。身份不明、assignment 不存在、协议 hash 不匹配或全局 paused 时先停止依赖这些条件的执行，报告总控并做与暂停意图相容的只读整理。不要静默创建第二个总控。缺输入写明缺项；不能把计划里的路径当作实际存在的证据。
 
-总控单写：`state/research-state.json`、`state/assignments.json`、`state/gpu_leases.json`、`state/resource_plan.json`、`state/claim_evidence.json`、`state/decisions.jsonl`。worker 只读这些文件；在自己的 `reports/<assignment_id>/` 或 assignment 指定的目录写 `report.md`、`status.json` 及证据。总控审核后将状态合并。分离代码写目录或独立分支/worktree，写同一文件前由总控分配唯一 owner。跨聊天用真实共享磁盘或总控明确传输的工件，不假定不同主机共享路径。
+总控单写：`state/research-state.json`、`state/assignments.json`、`state/gpu_leases.json`、`state/resource_plan.json`、`state/claim_evidence.json`、`state/method_search.json`、`state/decisions.jsonl`。worker 只读这些文件；在自己的 `reports/<assignment_id>/` 或 assignment 指定的目录写 `report.md`、`status.json` 及证据。总控审核后将状态合并。分离代码写目录或独立分支/worktree，写同一文件前由总控分配唯一 owner。跨聊天用真实共享磁盘或总控明确传输的工件，不假定不同主机共享路径。
 
-assignment 至少应给：`assignment_id`、`owner`、`role`、`inputs`、`allowed_write_paths`、`protocol_sha`、`run_ids`、`resource_request`、`done_gate`、`report_path`。使用现有 schema，不擅改键。状态可表达 queued/running/complete/failed/blocked/paused；任何状态含义以包内 schema 为准。
+assignment 至少应给：`assignment_id`、`owner`、`role`、`task_id`、`task_ids`、`inputs`、`allowed_write_paths`、`protocol_sha`、`run_ids`、`resource_request`、`done_gate`、`report_path`。字段示例见 [assignment模板](../templates/assignment.example.json)，任务归属见 [执行契约](../specs/execution_contract.md)。实际实验指定T1/T2/T3或辅助TOY；非实验跨任务工作task_id=null并列task_ids。契约变化由总控版本化，worker不擅改键。状态可表达 queued/running/complete/failed/blocked/paused；任何状态含义以包内 schema 为准。
 
 ## 运行与资源
 
-每个实验使用唯一 `runs/<task_id>/<run_id>/`。run 元数据至少含 `task_id,run_id,status,protocol_sha,code_sha,config_sha,data_version,split,method,train_seed,inference_seed,artifact_paths`；额外记录命令、运行目录、依赖/硬件、起止时间、退出码、主机/调度器 job ID、预算用量和失败原因。seed 为集合时保存完整清单而不是仅写“固定 seed”。这些字段缺失时，结果不能进入正式主表。哈希针对实际文件/代码内容计算，不能用随机字符串代替。无 git 时记录内容树摘要及说明，不能编造 commit SHA。
+每个正式实验使用唯一 `runs/<task_id>/<run_id>/`（T1/T2/T3）；辅助机制使用 `runs/TOY/<run_id>/`、task_id=TOY、execution_kind=toy，不计为第四个正式任务。run 元数据至少含 `candidate_id,task_id,run_id,status,protocol_sha,code_sha,config_sha,data_version,split,method,train_seed,inference_seed,artifact_paths`；额外记录命令、运行目录、依赖/硬件、起止时间、退出码、主机/调度器 job ID、预算用量和失败原因。seed 为集合时保存完整清单而不是仅写“固定 seed”。这些字段缺失时，结果不能进入正式主表。哈希针对实际文件/代码内容计算，不能用随机字符串代替。无 git 时记录内容树摘要及说明，不能编造 commit SHA。
 
 GPU worker 不能自行抢卡或直接提交。先向总控报预计显存、GPU 数量、时间、磁盘、方法/seed/run_id 和作业命令；总控在租约表登记后才启动或授权启动。租约记录 owner、run_id、host、device/partition、资源量、开始/到期或检查时间、job_id、状态。到期不等于作业已停；应核验真实进程/调度器才释放。作业已运行就接管监测，不重复 launch。多卡训练必须按拓扑与总并发预算安排；不同方法不能通过争抢显存形成不公平耗时。
 
@@ -20,8 +20,10 @@ GPU worker 不能自行抢卡或直接提交。先向总控报预计显存、GPU
 
 ## 研究不变量
 
+问题固定、方法开放，规则见 [方法搜索规范](../specs/method_search_and_selection.md)。下列视频配对/局部轨迹/投影具体规则只约束采用该构造的候选；所有方法都遵守数据/测试/成本/证据与独立部署边界。
+
 - teacher 缺少新增身份参考条件，但仍可能接收共有文本。所有主推理都是学生带外部条件从新噪声完整生成。
-- S0 是冻结原始学生；P、H0、H1、H2、O0、O1、C-H、C-O 的定义以 `specs/experiment_matrix.csv` 为准，不能省去 C-H/C-O 后声称排除了在线条件损失解释。
+- S0是冻结原始学生。P/H/O/C是初始家族的控制模板；活动方法与主张以测试前冻结的selected_method.md及active_experiment_matrix.csv为准。选择初始家族时，不能省去C-H/C-O却声称排除了在线条件损失解释；其它方法要有对应机制的合理强对照。
 - 数据先以完整老师视频为单位；身份簇、近重复组、原始视频隔离划分。数据有效量与候选生成量分别计数。参考在目标时间窗外优先，参考编码不泄漏目标时序。
 - 所有预测在同一噪声状态、同一生成区域、正确的参数化之间转换；rollout 后不继续沿用原始噪声为正确监督标签。
 - 比较 k 或轨迹来源时匹配最终监督时间；rollout stop-gradient；条件梯度用于目标构造，最终目标 stop-gradient，避免二阶图。

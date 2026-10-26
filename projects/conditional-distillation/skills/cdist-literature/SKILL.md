@@ -5,6 +5,8 @@ description: Verify primary literature, source claims, code releases and novelty
 
 # Conditional distillation literature audit
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 Use for this project's literature task, closest-work comparison or citation refresh. Find `PROJECT_ROOT` from the supplied bundle path or an ancestor containing `literature/SOURCE_AUDIT.md`; do not assume this skill's installation directory is the research repository. Read the root research specification and literature ledger before browsing.
 
 1. Read `literature/SOURCE_AUDIT.md`, `literature/PENDING_VERIFICATION.md`, and any new evidence. Verify current date and the actual target ICML year. An inaccessible source is unverified, not nonexistent.

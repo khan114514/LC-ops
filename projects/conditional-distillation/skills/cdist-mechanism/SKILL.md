@@ -5,6 +5,8 @@ description: 为本研究运行二维解析机制、同query视频局部干预�
 
 # 机制与归因实验
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 读取 [机制协议](../../specs/mechanism_protocol.md)；涉及目标实现再读 [预测及目标契约](../../specs/prediction_and_target_contract.md)。使用活跃项目根的实际资源与冻结协议，先完成能否证伪主张的最小证据。
 
 ## 首先回答老师是否有用

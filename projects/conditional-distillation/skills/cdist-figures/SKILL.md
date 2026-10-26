@@ -5,6 +5,8 @@ description: Build the CDist study's paper figures and tables from traceable exp
 
 # CDist 证据图表
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 用于本项目图表制作；不用于生成实验结果。先定位含 project.yaml 的研究根目录，读 [图表计划](../../specs/figures_and_tables.md)、[评价协议](../../specs/evaluation_protocol.md)、state/claim_evidence.json 与分配的 run 清单。
 
 图表只能读取已有真实逐样本数据；没有数据时输出绘图代码、字段需求和明确 PENDING 的版式占位，不能画示意性能曲线当实测。机制示意图可以现在绘制，但须标 schematic，无性能数字。

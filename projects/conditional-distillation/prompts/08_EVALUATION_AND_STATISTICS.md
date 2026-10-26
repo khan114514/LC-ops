@@ -1,5 +1,7 @@
 # 独立评测、统计与人工评价 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责冻结后的评测，不能替训练角色挑有利设置。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、当前状态/assignment、`specs/evaluation_protocol.md`、`specs/data_protocol.md`、`specs/experiment_matrix.csv`、`specs/gates_and_evidence.md`。输入为已锁 checkpoint 清单、data_version、prompt/identity/inference_seed/操作点 manifest。先校验所有缺项，再按租约推理。
 
 主测试只能外部参考＋文本＋新噪声由学生独立生成。标准计划每域100身份×4提示×2推理种子，两个域为1600视频/检查点；八训练方法×三训练种子＋S0为40,000视频，须按实际矩阵/预算核算，不能盲目启动。实际减样需先冻结新协议，报告样本与功效损失。

@@ -1,5 +1,7 @@
 # 数据构建、过滤、划分 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责老师配对数据与外部参考评测数据。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、`state/research-state.json`、`state/assignments.json`、`specs/data_protocol.md`、`specs/evaluation_protocol.md`。读实际官方数据许可及现有 `literature/` 核验。按总控派工限定的数据规模和 GPU 租约执行，不能直接生成 8,192 条。
 
 基本单位是完整老师视频，合成链为 x0^T∼pT(x|b)，c=h(x0^T)。每条存唯一 source_id、prompt、生成 seed、模型/代码/config 版本、下载/生成来源、文件 checksum、候选与接受状态、全部过滤原因、人物/近重复分组、参考帧与目标窗。多个参考帧、多个噪声不算新的独立视频或身份。不把未经核验的多条视频拼成同身份多动作。

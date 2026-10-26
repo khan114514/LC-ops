@@ -5,6 +5,8 @@ description: 独立只读审查条件扩散蒸馏研究的算法、归因、数�
 
 # CDist 独立证据审查
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 定位活跃项目，读 [共享契约](../../prompts/01_SHARED_WORKER_CONTRACT.md)、[gate与证据](../../specs/gates_and_evidence.md)、研究/预测/数据/评价规范、矩阵、当前状态及assignment。只写QA报告目录，不修改实现、state或论文。安装快照不能取代被审版本。允许CPU重算；GPU复验需总控租约。
 
 ## 审查顺序
@@ -27,3 +29,5 @@ description: 独立只读审查条件扩散蒸馏研究的算法、归因、数�
 
 
 三任务范围：读取 [任务契约](../../specs/three_task_protocol.md)，按assignment.task_id选择T1身份视频、T2 Canny图像、T3人体姿态图像的独立数据、代理、指标、gate与预算；新run使用runs/<task_id>/<run_id>/。本技能原有视频/身份细节仅用于T1，不能强加给T2/T3。三者都是正式研究范围；负结果需保留，未执行不能声称三任务实验完成，可选第二视频架构不是第4个主任务。
+
+项目总评还须遵守 [执行契约](../../specs/execution_contract.md)：核对整体终态、阴性关闭的事前规则/独立复核、缩水协议与未运行矩阵。诚实草稿gate通过不等于研究已完成。

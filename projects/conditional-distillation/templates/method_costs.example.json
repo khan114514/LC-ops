@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "train_seeds": [
+    11,
+    22,
+    33
+  ],
+  "rows": [
+    {
+      "task_id": "T1",
+      "method": "P",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T1",
+      "method": "H0",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T1",
+      "method": "H1",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T1",
+      "method": "H2",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T1",
+      "method": "O0",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T1",
+      "method": "O1",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T1",
+      "method": "C-H",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T1",
+      "method": "C-O",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "P",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "H0",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "H1",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "H2",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "O0",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "O1",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "C-H",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T2",
+      "method": "C-O",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "P",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "H0",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "H1",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "H2",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "O0",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "O1",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "C-H",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    },
+    {
+      "task_id": "T3",
+      "method": "C-O",
+      "config_id": null,
+      "hardware_id": null,
+      "updates": 3000,
+      "train_seeds": [
+        11,
+        22,
+        33
+      ],
+      "repeats": 1,
+      "gpu_count": null,
+      "update_seconds": null,
+      "measurement_run_id": null
+    }
+  ]
+}

@@ -1,7 +1,12 @@
 # 这是起始计划，不是执行记录。接收者运行启动 prompt 后填入本地信息。
 project_name: conditional-distillation-study
 working_name: CDist
-objective: three-task conditional distillation research and an evidence-grounded ICML draft
+objective: execute three-task conditional distillation research to evidence-backed conclusions and an ICML draft
+execution_contract: specs/execution_contract.md
+method_search_contract: specs/method_search_and_selection.md
+method_policy: fixed_problem_open_methods
+selected_method: null
+initial_plan_scope: CDIST_INITIAL_FAMILY_REFERENCE
 bundle_date: '2026-10-26'
 target_venue: ICML
 target_year: null

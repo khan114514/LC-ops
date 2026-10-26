@@ -9,3 +9,5 @@
 产物：`literature/source_ledger.csv`（每行 source_id、title、url、verified_status、claim_checked、evidence_location、notes、retrieved_date）、`literature/related_work_matrix.csv`、`literature/verified_references.bib`、单篇摘要、`literature/novelty_audit.md`，以及 assignment 的 `report.md/status.json`。BibTeX 必须从已核验的主源程序获取并保存原始元数据及检索来源，不能从记忆或仅凭标题重建。明确区分主源存在、方法阅读、代码复现、许可核验和实际兼容；未完成部分保持 pending。用实际可用搜索工具，不假定 Exa 或某 CLI 已安装。
 
 done gate：所有原文具名关键文献均有 verified/contradicted/unverified 结论和证据；三条主张 A/B/C 的已有覆盖、可检验差异和需要的新实验清楚；明确是否须改论文定位。查不到的重要条目不能编造，写入引用缺口，继续完成其他独立核验。将“候选创新”与“已验证贡献”分开；把 `[CITATION NEEDED: specific gap]` 引用缺口和证据交给总控及 paper owner，由论文 owner 修改 manuscript，文献 worker 不越权改 `paper/`。最终报告给总控处理决策。
+
+按 [方法搜索规范](../specs/method_search_and_selection.md) 将最近邻审查转为候选卡与可检验差异，和18角色协作提出邻近新路线。原OPD/投影家族不预设胜出；以主源差异及实际开发证据判断新颖性/实用性，不凭换名或调参制造创新。

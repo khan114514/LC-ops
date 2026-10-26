@@ -1,5 +1,7 @@
 # T2：Canny 边缘控制图像正式任务 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责正式任务 `task_id=T2`。它与 T1 身份视频、T3 人体姿态图像并列，不是等待 T1 成功后才启用的可选泛化。先读 `project.yaml`、当前 state/assignment、`prompts/01_SHARED_WORKER_CONTRACT.md`、`specs/three_task_protocol.md`、`specs/research_spec.md`、`specs/prediction_and_target_contract.md`、数据/评价/实验矩阵和 gate 规范。以 assignment 的写目录、冻结协议和资源授权为边界；无 GPU 或无预算时完成准备材料，不启动实验。
 
 ## 对象与兼容性门槛
@@ -44,3 +46,5 @@ T2 自己通过 W0 兼容和成本 → W1 局部 teacher 质量/边缘冲突与 
 
 
 预算调整口径：完整正式协议为八方法各三训练seed；预算不足可在测试暴露前由总控显式冻结缩小协议并保留限制说明，不能静默省略方法/seed或声称完成原全量配置。B/C必须有本task_id的对应归因消融，不可借用其他任务结果升格。
+
+全矩阵是完整正式目标；满足事前停止规则并经独立复核的阴性分支可按 [执行契约](../specs/execution_contract.md) 关闭。后继逐项记NOT_RUN_WITH_REASON，不能标成完整实证；三个任务均需有真实状态与依据。

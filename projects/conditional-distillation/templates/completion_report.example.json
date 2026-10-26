@@ -1,0 +1,20 @@
+{
+  "template_only": true,
+  "contract_version": "autoresearch-execution-v1",
+  "project_outcome": null,
+  "scope": null,
+  "protocol_sha": null,
+  "tasks": {
+    "T1": {"status": "INCOMPLETE", "protocol_sha": null, "gate_evidence": {}, "run_ids": [], "closure_report": null, "qa_report": null, "unrun_matrix_rows": [], "limitations": []},
+    "T2": {"status": "INCOMPLETE", "protocol_sha": null, "gate_evidence": {}, "run_ids": [], "closure_report": null, "qa_report": null, "unrun_matrix_rows": [], "limitations": []},
+    "T3": {"status": "INCOMPLETE", "protocol_sha": null, "gate_evidence": {}, "run_ids": [], "closure_report": null, "qa_report": null, "unrun_matrix_rows": [], "limitations": []}
+  },
+  "deliverables": [],
+  "independent_qa_reports": [],
+  "unresolved_issues": [],
+  "active_jobs": [],
+  "actual_resource_usage": null,
+  "paper_status": null,
+  "resume_conditions": [],
+  "updated_at": null
+}

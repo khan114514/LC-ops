@@ -49,4 +49,6 @@
 不需要为本研究装前端、Figma、宠物、专家题 QA 等无关技能；科学数据图不使用图像生成模型伪造。
 
 
-三任务入口：总启动prompt已内含T1/T2/T3的定义、数据与评价；[T2专用prompt](prompts/16_T2_CANNY_TASK.md)、[T3专用prompt](prompts/17_T3_POSE_TASK.md)用于分派对应执行者。共18份prompts，仍为12个专用skills。
+三任务入口：总启动prompt已内含T1/T2/T3的定义、数据与评价；[T2专用prompt](prompts/16_T2_CANNY_TASK.md)、[T3专用prompt](prompts/17_T3_POSE_TASK.md)用于分派对应执行者。共19份prompts，仍为12个专用skills。
+
+新增角色入口：[18 方法探索与选择](prompts/18_METHOD_SEARCH_AND_SELECTION.md)。总控协调文献、工程、方法与评价技能，按 [方法搜索规范](specs/method_search_and_selection.md) 完成候选比较、选择与ICML汇总；不是新增第十三个技能。

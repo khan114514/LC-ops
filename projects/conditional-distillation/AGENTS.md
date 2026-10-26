@@ -16,3 +16,7 @@
 
 
 研究范围已明确为T1身份视频、T2 Canny图像、T3人体姿态图像，完整规范在specs/three_task_protocol.md。task_id必须在派工/运行/证据中保留；三个任务独立gate与预算，均不得静默省略。
+
+执行、辅助TOY归属、阴性关闭与整体完成标准统一见 [执行契约](specs/execution_contract.md)。收到实际研究启动请求后，持续推进所有依赖满足且预算允许的工作；PENDING初稿不是整体完成。当前维护/审查包不自动启动实验。
+
+方法范围以 [方法搜索与选择](specs/method_search_and_selection.md) 为准：原OPD/投影只是初始候选，按最近邻、新颖性证据与实测实用性探索、筛选、选择并汇总，目标ICML。state/method_search.json由总控唯一写入；选择后冻结活动矩阵，不能用测试挑方法。

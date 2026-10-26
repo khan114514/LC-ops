@@ -38,3 +38,5 @@
 
 
 The current three-task main.tex passed the built-in compiler again. Its current SHA and result are in ../reports/latex_compile_check.md. The existing source was edited in place; no replacement document or separate PDF was created.
+
+当前论文只描述初始候选家族，尚未选定最终方法。方法开放要求与改写范围见 [DRAFT_STATUS.md](DRAFT_STATUS.md)；最终按开发选择结果重写，不能因为已有这份初稿而锁死OPD。

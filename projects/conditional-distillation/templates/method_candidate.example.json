@@ -1,0 +1,23 @@
+{
+  "template_only": true,
+  "candidate_id": null,
+  "status": "PROPOSED",
+  "task_ids": ["T1", "T2", "T3"],
+  "problem_fit": null,
+  "method_definition": null,
+  "falsifiable_hypothesis": null,
+  "nearest_primary_sources": [],
+  "verified_differences": [],
+  "novelty_status": "UNVERIFIED",
+  "expected_benefit": null,
+  "confounds_and_risks": [],
+  "required_controls": [],
+  "pilot_protocol_sha": null,
+  "stop_rule": null,
+  "implementation_plan": null,
+  "estimated_resources": null,
+  "actual_cost_run_ids": [],
+  "development_run_ids": [],
+  "decision": null,
+  "decision_evidence": []
+}

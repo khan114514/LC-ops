@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "NOT_STARTED",
+  "owner": null,
+  "initial_family": "CDIST_INITIAL",
+  "candidate_records": [],
+  "selection_rule_protocol_sha": null,
+  "selected_candidate_id": null,
+  "backup_candidate_ids": [],
+  "selection_report": null,
+  "selected_method_spec": null,
+  "active_matrix_path": null,
+  "active_matrix_sha": null,
+  "last_update": null
+}

@@ -5,6 +5,8 @@ description: 按冻结矩阵执行条件蒸馏的分阶段训练、资源租约�
 
 # CDist 训练执行
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 先读活跃项目 `project.yaml`、state和assignment、[共享契约](../../prompts/01_SHARED_WORKER_CONTRACT.md)、[实验矩阵](../../specs/experiment_matrix.csv)、[预测契约](../../specs/prediction_and_target_contract.md)、[阶段gate](../../specs/gates_and_evidence.md)。只执行分配run，不擅改总控state。安装的快照是参考，当前项目规范优先。
 
 ## 启动条件

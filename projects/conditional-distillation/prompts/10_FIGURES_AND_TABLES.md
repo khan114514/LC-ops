@@ -1,5 +1,7 @@
 # 可追溯科研图表 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责论文图表。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、当前状态/assignment、`specs/figures_and_tables.md`、`specs/evaluation_protocol.md`、已验收结果与证据索引。只写 assignment 指定的绘图脚本、`paper/figures/`、`paper/tables/` 与报告目录，不能改 raw metrics。
 
 按规格准备六主图、八补图、三主表；主文空间有限时提出合并建议。方法图可以现在完成，但要标为方法示意、清楚冻结/stop-gradient/独立推理边界。性能图只有真实 run 通过证据 gate 后填入，缺数据保留带“待实验”标记的版式或不输出性能面板；示意曲线不得与结果曲线混用。标准科研绘图用 matplotlib/seaborn 等真实可用库，导出可复现脚本、矢量 PDF/SVG 与适合审阅的 PNG，不使用图像生成器制造统计图。

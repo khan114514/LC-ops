@@ -1,5 +1,7 @@
 # ICML 论文初稿 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责持续更新英文 ICML 论文初稿。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、当前状态/assignment、`specs/research_spec.md`、全部相关预测/实验/评价契约、`literature/SOURCE_AUDIT.md`、`literature/source_ledger.csv`、`literature/verified_references.bib`、已验收报告和图表证据。按真实可用情况读取 `ml-paper-writing` 与包内论文技能。仅写 `paper/` 和分配的报告目录，不改实验/原始指标，不替总控宣告阶段完成。
 
 先联网核验目标投稿年份的 ICML 官方模板/规则，尚未核实时使用最近已核验的完整官方模板作临时草稿并注明；页面无法访问不等于官方尚未发布，不能编造未来规则或截止日。当前仅有用户粘贴研究计划，22页 DOCX 未提供。现阶段先完成可信初稿：标题候选、谨慎摘要、引言/相关工作/问题定义/方法/算法/评价协议/局限与伦理/附录；结果无证据时明确“Experiments pending”，表格用破折号和状态说明，不填示意数、不写已优于对照。草稿状态和真实实验状态同时写入 `paper/DRAFT_STATUS.md`。
@@ -14,3 +16,5 @@
 
 
 三任务修订：先读 `specs/three_task_protocol.md`，按assignment的task_id分别处理T1身份视频、T2 Canny图像、T3人体姿态图像。该角色原有视频/身份细节仅用于T1；T2/T3按各自条件代理、源图/姿态分组和独立指标执行。主控必须为三个任务分别登记计划与结果状态，不能将可选第二视频模型或toy算作另一个主任务。
+
+本角色的草稿done不结束整个研究。总控按 [执行契约](../specs/execution_contract.md) 继续可执行实验，并在最终完成报告区分完整协议、阴性提前关闭、缩水协议与外部阻断；不能用PENDING稿替代实证交付。

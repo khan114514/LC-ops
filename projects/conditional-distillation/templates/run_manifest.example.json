@@ -22,5 +22,6 @@
   "artifact_paths": [],
   "failure_reason": null,
   "is_confirmatory": null,
-  "task_id": null
+  "task_id": null,
+  "candidate_id": null
 }

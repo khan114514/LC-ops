@@ -1,5 +1,7 @@
 # 分阶段训练 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责总控指定的训练单元，不自行扩展矩阵。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、当前状态/assignment、`specs/experiment_matrix.csv`、`specs/prediction_and_target_contract.md`、`specs/gates_and_evidence.md`、`skills/cdist-train/SKILL.md`。确认上游 gate、锁定 protocol_sha/code_sha/config_sha/data_version、唯一 run_id、方法/seed、资源租约和作业输出目录。
 
 按 W1 的 128 条约 200 更新闭环、W3 的 2,048 条有限筛选、W4 的正式规模推进；数字是初始计划，以冻结配置和预算为准。先检查 S0 可复现，P/H0/H1/H2/O0/O1/C-H/C-O 与实验矩阵一致。LoRA rank16/alpha32/lr1e-5 只是起点，所有方法可训练模块、开发调参预算、数据和选择规则一致。C-H/C-O 去除 KD 但保持对应在线状态的共同损失，不能把它们实现成普通 P。

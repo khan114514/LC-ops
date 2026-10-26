@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-26",
+  "scope": "PROMPTS_AUXILIARY_CODE_AND_DISTRIBUTION_ONLY",
+  "experiments_executed": false,
+  "gpu_compatibility_certified": false,
+  "novelty_or_practical_effect_certified": false,
+  "checks": {
+    "cost_plan_cli": {
+      "status": "PASS",
+      "tests": 24,
+      "output": "........................\n----------------------------------------------------------------------\nRan 24 tests in 3.411s\n\nOK"
+    },
+    "skill_frontmatter": {
+      "status": "PASS",
+      "count": 12,
+      "validator": "skill-creator quick_validate.py",
+      "skills": [
+        "cdist-data",
+        "cdist-engineer",
+        "cdist-evaluate",
+        "cdist-figures",
+        "cdist-generalize",
+        "cdist-literature",
+        "cdist-mechanism",
+        "cdist-method",
+        "cdist-orchestrate",
+        "cdist-paper",
+        "cdist-review",
+        "cdist-train"
+      ]
+    },
+    "yaml_parse": {
+      "status": "PASS",
+      "files": [
+        "project.yaml",
+        "skills/cdist-data/agents/openai.yaml",
+        "skills/cdist-engineer/agents/openai.yaml",
+        "skills/cdist-evaluate/agents/openai.yaml",
+        "skills/cdist-figures/agents/openai.yaml",
+        "skills/cdist-generalize/agents/openai.yaml",
+        "skills/cdist-literature/agents/openai.yaml",
+        "skills/cdist-mechanism/agents/openai.yaml",
+        "skills/cdist-method/agents/openai.yaml",
+        "skills/cdist-orchestrate/agents/openai.yaml",
+        "skills/cdist-paper/agents/openai.yaml",
+        "skills/cdist-review/agents/openai.yaml",
+        "skills/cdist-train/agents/openai.yaml"
+      ]
+    },
+    "temporary_skill_install": {
+      "status": "PASS",
+      "skill_count": 12,
+      "local_link_checks": 709,
+      "existing_destination_preserved": true,
+      "global_skills_modified": false
+    },
+    "original_source_and_paper_assets": {
+      "status": "PASS",
+      "unchanged_file_count": 16,
+      "paper_recompiled": false,
+      "note": "Paper source and original plan unchanged; final method is not yet selected. DRAFT_STATUS.md describes future rewrite."
+    },
+    "diff_whitespace": {
+      "status": "PASS"
+    },
+    "independent_text_scenarios": {
+      "status": "PASS",
+      "report": "autoresearch_forward_review.md",
+      "scope": "Textual execution and method-selection scenarios only"
+    },
+    "bundle_structure": {
+      "check_kind": "STRUCTURE_AND_LINKS_ONLY",
+      "skill_count": 12,
+      "markdown_count": 77,
+      "errors": [],
+      "status": "PASS",
+      "experimental_evidence_certified": false
+    }
+  }
+}

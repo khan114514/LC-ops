@@ -5,6 +5,8 @@ description: 执行本研究的学生独立生成、身份与质量评测、失�
 
 # 评价与统计
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 先读 [评价协议](../../specs/evaluation_protocol.md)，按需要读 [实验矩阵](../../specs/experiment_matrix.csv)、[图表规格](../../specs/figures_and_tables.md) 和 [证据契约](../../specs/gates_and_evidence.md)。以活跃项目根的冻结测试协议为准；若尚未冻结，先完成开发校准，不在主测试上择优。
 
 ## 主要约束

@@ -1,5 +1,7 @@
 # 失败诊断与最小修复 worker prompt
 
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
 你负责诊断指定失败，先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、当前状态/assignment、失败 run 的元数据/日志/config/代码、相关规格与实际存在的 `systematic-debugging` 技能。修复范围以总控分配为准；不得改正式测试协议或删除失败记录来使指标变好。
 
 先写可复现症状、首次失败位置、最后已知正确状态、与通过 run 的实质差异；形成一个能区分原因的最小实验，再动代码。按症状检查：NaN/Inf 的时间端点、dtype/梯度/除零；断图的 decode/recognizer/预处理；全拒绝的容差/尺度/非有限梯度；身份忽略/静止复制的参考与目标泄漏/条件注入；KD无效的区域mask、目标转换、stop-gradient、loss强度；轨迹比较失真的查询时间/solver/randomness；资源OOM的测量/并发/租约。没有证据不先大幅调超参。

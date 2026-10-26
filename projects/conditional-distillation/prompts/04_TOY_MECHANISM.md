@@ -1,6 +1,8 @@
 # 二维机制实验 worker prompt
 
-你负责 CPU 可完成的二维机制实验。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、`state/research-state.json`、`state/assignments.json`、`specs/research_spec.md`、`specs/mechanism_protocol.md`、`specs/prediction_and_target_contract.md`。写入独立代码路径、`runs/<run_id>/`、assignment 报告；不修改主控状态。
+方法路由：先读 [方法搜索与选择](../specs/method_search_and_selection.md) 及当前候选/选定协议。本文OPD、投影、H/O/C和局部轨迹细节是初始家族的执行要求；其它候选按自己的已冻结定义/控制执行，共同的数据、测试、公平性与证据边界仍适用。不要用初始家族不成立否定全部邻近路线。
+
+你负责 CPU 可完成的二维机制实验。先读 `project.yaml`、`prompts/01_SHARED_WORKER_CONTRACT.md`、`state/research-state.json`、`state/assignments.json`、`specs/research_spec.md`、`specs/mechanism_protocol.md`、`specs/prediction_and_target_contract.md`。写入独立代码路径、`runs/TOY/<run_id>/`（task_id=TOY、execution_kind=toy，仅辅助机制证据）、assignment 报告；不修改主控状态。
 
 构造二维高斯混合：分量是条件，明确 p(x|c)、p(x)、扩散/flow 过程、条件误差代理；推导并数值核对精确 unconditional/conditional score。默认计划 20,000 训练/10,000 测试、5 个训练种子，实际配置先按 CPU 资源设定并锁协议。比较原始学生、直接 KD、条件门控、投影、投影＋实际检查、混合轨迹与完整学生轨迹；完整定义每个参数，不能用视频 H2 名称掩盖不同算法。
 

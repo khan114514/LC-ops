@@ -5,6 +5,8 @@ description: Coordinate the three formal CDist condition tasks and optional vide
 
 # CDist 三任务与适用范围
 
+方法范围：先读 [方法搜索与选择](../../specs/method_search_and_selection.md) 和当前候选/选定协议。本文涉及的OPD、H/O/C、投影/局部轨迹是初始家族要求，不是所有候选必用算法；其它路线按其冻结定义与控制执行，共同证据边界不变。
+
 先定位活跃项目根，读取当前 state/assignment、[共享 worker 契约](../../prompts/01_SHARED_WORKER_CONTRACT.md)、[三任务协议](../../specs/three_task_protocol.md)、[研究定义](../../specs/research_spec.md)、[预测及目标契约](../../specs/prediction_and_target_contract.md) 与 [评价协议](../../specs/evaluation_protocol.md)。当前项目冻结协议优先于安装快照；本技能不授权新增训练或算力。
 
 ## 正式任务与推进边界

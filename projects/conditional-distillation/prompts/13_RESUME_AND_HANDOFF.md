@@ -9,3 +9,7 @@
 worker 从总控 assignment 继续，不自行改阶段或抓取另一个 worker 的工作。续训须检查模型/optimizer/scheduler/RNG/data cursor/global_step、content hash 与训练入口；只有 weights 的恢复要标非精确重启，不声称连续训练。先保留所有历史正负证据与失败产物。
 
 产物：`reports/<assignment_id>/resume_audit.md`，列已完成、正在运行、失败/失联、预算余量、当前版本与下一项最小动作。总控写状态和派工后再执行；worker 直接回交 audit。无需未来唤醒时不创建自动化。done gate：没有重复 run、状态与实际作业一致、暂停/版本/预算边界保留，并开始恰当的下一项已授权工作。
+
+读取 [执行契约](../specs/execution_contract.md) 与已有completion_report；草稿就绪不是研究已完成，预算停止/外部阻断/中断也不等于暂停授权。缺项消除且用户实际要求继续时按剩余范围接管；完成状态必须重新依据真实证据，不覆盖历史提前关闭或未运行记录。
+
+恢复时还读取state/method_search.json、当前候选及selected_method/active_experiment_matrix；保留已冻结选择与淘汰证据，不从初始OPD方案重新开始，不用已暴露测试改选后仍声称确认结果。
